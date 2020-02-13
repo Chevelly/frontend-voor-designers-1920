@@ -34,3 +34,5 @@ Voor wat complexere micro-interacties waar verschillende states elkaar moeten op
 
 - eventlistener: [transitionend](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionend_event)
 - eventlistener: [animationend](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/animationend_event)
+
+https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/Stap01.png
