@@ -25,19 +25,19 @@ Ik heb bewust gekozen voor de use case waarbij ik moet filteren omdat ik dit tij
 
 ## Proces
 
-### Schetsen
+### 01 Schetsen
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/schets.JPG "Schetsen")
 Om mijn ideeën te visualiseren ben ik begonnen met het maken van een schets. In de schets visualiseer ik de lay-out van de user interface en beschrijf ik de elementen die ik nodig heb om dit te kunnen realiseren.
 
-### Buttons
+### 02 Buttons
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/Stap01.png "Buttons")
 Met het HTML-element *ul* maak ik list items aan die fungeren als buttons waarmee de gebruiker met één druk op de knop foto's te zien krijgt die corresponderen met de kleur van de button waarop geklikt is. De buttons krijgen hun kleur en grootte door een *class* aan de list items toe te voegen en deze in het CSS bestand aan te roepen.
 
-### Gallerij
+### 03 Gallerij
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap02.png "Gallerij")
 Voor de gallerij zet ik elke foto in een individuele *div*. Het totaal aantal foto's in de gallerij deel ik door de hoeveelheid kolommen die ik wil, namelijk 4. De foto's binnen een kolom zitten in een *div* genaamd *column*. In het CSS bestand stel ik vast dat de maximale breedte van een kolom 25% van de breedte van het scherm mag hebben waardoor er vier kolommen naast elkaar komen. Met de *padding property* creeër ik ruimte tussen de foto's.
 
-### Javascript
+### 04 Javascript
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap03.png "Javascript")
 
 
