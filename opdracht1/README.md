@@ -1,4 +1,5 @@
-# Opdracht 1: Een Micro-interactie uitwerken en testen door Chevelly Hiralall
+# Opdracht 1: Een Micro-interactie uitwerken en testen
+## Verslaglegging door Chevelly Hiralall, 500700481
 
 Dit verslag beschrijft en visualiseert de stappen van het schetsen tot het ontwerpen van een user interface voor een gegeven use case. Het ontwerp is uitgewerkt in HTML, CSS en Javascript om te kunnen testen in een browser.
 
@@ -34,7 +35,10 @@ Met het HTML-element *ul* maak ik list items aan die fungeren als buttons waarme
 
 ### Gallerij
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap02.png "Gallerij")
+Voor de gallerij zet ik elke foto in een individuele *div*. Het totaal aantal foto's in de gallerij deel ik door de hoeveelheid kolommen die ik wil, namelijk 4. De foto's binnen een kolom zitten in een *div* genaamd *column*. In het CSS bestand stel ik vast dat de maximale breedte van een kolom 25% van de breedte van het scherm mag hebben waardoor er vier kolommen naast elkaar komen. Met de *padding property* creeër ik ruimte tussen de foto's.
 
+### Javascript
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap03.png "Javascript")
 
 
 
