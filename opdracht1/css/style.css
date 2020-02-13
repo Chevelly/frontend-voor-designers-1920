@@ -1,16 +1,100 @@
-html{
-  box-sizing: border-box; /* https://css-tricks.com/box-sizing/ */
-  background:#eee;
-  background: url("../img/flagF4D.png") center no-repeat;
+html {
+    box-sizing: border-box;
+    /* https://css-tricks.com/box-sizing/ */
+    background: #eee;
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
 }
-body{
-  max-width: 30em;
-  margin: 1em auto;
-  padding: 1em;
-  background: #fff;
-  border-radius: 1em;
-  box-shadow: 0.5em 0.5em 0.5em rgba(68,68,68,0.6);
+
+.main .category {
+    font-family: bebas neue;
+    letter-spacing: 0.1em;
+    text-align: center;
+    max-width: 50em;
+    margin: 1em auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 2em;
+    box-shadow: 0.5em 0.5em 0.5em rgba(68, 68, 68, 0.6);
+}
+
+ul {
+    list-style: none;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.all {
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    width: 80px;
+    height: 80px;
+    border-radius: 6em;
+}
+
+.red {
+    background: red;
+    width: 80px;
+    height: 80px;
+        border-radius: 6em;
+}
+
+.green {
+    background: green;
+    width: 80px;
+    height: 80px;
+        border-radius: 6em;
+}
+
+.blue {
+    background: blue;
+    width: 80px;
+    height: 80px;
+        border-radius: 6em;
+}
+
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+
+}
+
+/* Vier gelijke kolommen naast elkaar */
+.column {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column .images {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - twee kolom layout ipv vier kolommen */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - twee kolommen bovenop elkaar ipv naast elkaar */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
