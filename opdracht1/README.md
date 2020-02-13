@@ -1,4 +1,4 @@
-# Frontend voor Designers - opdracht 1: Een Micro-interactie uitwerken en testen
+# Opdracht 1: Een Micro-interactie uitwerken en testen door Chevelly Hiralall
 
 Dit verslag beschrijft en visualiseert de stappen van het schetsen tot het ontwerpen van een user interface voor een gegeven use case. Het ontwerp is uitgewerkt in HTML, CSS en Javascript om te kunnen testen in een browser.
 
@@ -25,11 +25,11 @@ Ik heb bewust gekozen voor de use case waarbij ik moet filteren omdat ik dit tij
 ## Proces
 
 ### Schetsen
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/schets.jpg "Schetsen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/schets.JPG "Schetsen")
 Om mijn ideeën te visualiseren ben ik begonnen met het maken van een schets. In de schets visualiseer ik de lay-out van de user interface en beschrijf ik de elementen die ik nodig heb om dit te kunnen realiseren.
 
 ### Buttons
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap01.png "Buttons")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/Stap01.png "Buttons")
 Met het HTML-element *ul* maak ik list items aan die fungeren als buttons waarmee de gebruiker met één druk op de knop foto's te zien krijgt die corresponderen met de kleur van de button waarop geklikt is. De buttons krijgen hun kleur en grootte door een *class* aan de list items toe te voegen en deze in het CSS bestand aan te roepen.
 
 ### Gallerij
