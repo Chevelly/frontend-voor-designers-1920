@@ -1,13 +1,8 @@
-/*
-  Wat doe je ook alweer in Javascript voor een micro-interactie?
-  1. Gebruik de querySelector om een element in je html te selecteren
-  2. Koppel een evenListener aan het element om een mouse-event te detecteren
-  3. Gebruik het Classlist object om een css class aan een element toe te voegen of weg te halen.
-*/
-
+// De querySelector selecteert elementen in de html
 const listItems = document.querySelectorAll('.main li');
 const allimages = document.querySelectorAll('.main .gallery .images');
 
+// Voegt een 'active' class toe of haalt weg als deze al toegevoegd is
 function toggleActiveClass(active) {
     listItems.forEach(item => {
         item.classList.remove('active');
@@ -15,6 +10,7 @@ function toggleActiveClass(active) {
     active.classList.add('active');
 }
 
+/* Door een Eventlistener aan het element te koppelen wordt een mouse-event gedetecteerd. Wanneer de 'all'-button geclickt wordt, worden alle foto's 'block' = zichtbaar. Zo niet, dan loop-ed de functie door alle foto's tot de data-class overeenkomt met die van de actieve button. De foto's die niet voldoen aan de voorwaarde worden niet zichtbaar = 'none'. */
 function toggleimages(dataClass) {
     if (dataClass === 'all') {
         for (let i = 0; i < allimages.length; i++) {

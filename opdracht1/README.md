@@ -26,8 +26,12 @@ Ik heb bewust gekozen voor de use case waarbij ik moet filteren omdat ik dit tij
 ## Proces
 
 ### 01 Schetsen
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/schets.JPG "Schetsen")
 Om mijn ideeën te visualiseren ben ik begonnen met het maken van een schets. In de schets visualiseer ik de lay-out van de user interface en beschrijf ik de elementen die ik nodig heb om dit te kunnen realiseren.
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/schets01.JPG "Schetsen")
+In mijn eerste idee wilde ik een color wheel verwerken waarbij de gebruiker met een color picker een kleur kon kiezen. Hieropvolgend zouden alleen foto's getoond worden in de desbetreffende kleur. Na overleg met de docent bleek dit idee iets té enthousiast. Het werd mij aangeraden bij de basis te beginnen en hier steeds meer aan toe te voegen.
+
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/schets02.JPG "Schetsen")
+Mijn tweede idee is een stuk simpeler. Ik maak het filteren op kleur voor de gebruiker gemakkelijk door buttons in mijn ontwerp te verwerken die ik door middel van CSS een corresponderende kleur geef. Daarnaast zijn alle foto's in een galerij zichtbaar zodat de gebruiker in een oogopslag en met weinig clicks ziet welke foto's hij of zij kan gebruiken voor de Visual Research. Om de uitwerking hiervan nog uitdagender te maken wil ik het ontwerp op zo een manier coderen dat het toevoegen van foto's en/of een kleur laagdrempelig is.
 
 ### 02 Buttons
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/Stap01.png "Buttons")
