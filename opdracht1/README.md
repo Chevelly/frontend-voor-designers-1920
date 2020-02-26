@@ -64,5 +64,6 @@ Voor de eindoplevering van de eerste opdracht heb ik meer kleuren en foto's toeg
 
 
 ### 06 Eindresultaat
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/5ylRF9dOr1I/0.jpg)](http://www.youtube.com/watch?v=5ylRF9dOr1I&feature=youtu.be)
 *Klik op de image om doorverwezen te worden naar de video.*
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/5ylRF9dOr1I/0.jpg)](http://www.youtube.com/watch?v=5ylRF9dOr1I&feature=youtu.be)
+
