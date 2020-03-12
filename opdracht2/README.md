@@ -33,6 +33,20 @@ Bij het lezen van de use cases voor deze opdracht had ik in eerste instantie gek
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/schets02.JPG "Schetsen")
 Ik heb uiteindelijk gekozen voor de use case waarvoor ik een portfolio website maak. Wanneer ik naar 'beneden' scroll vult de betreffende section zich met informatie. Als ik op tab klik ga ik ook naar de volgende section. Of als ik 'volgende' roep.
 
+### 02 Viewports
+#### Viewport 01
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp1.png "Schetsen")
+
+#### Viewport 02
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp2.png "Schetsen")
+
+#### Viewport 03
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp3.png "Schetsen")
+
+#### Viewport 04
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp4.png "Schetsen")
+
+
 ## Resources
 - Bekijk hier de lijst [User Interface Events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent) die je in javascript kunt gebruiken.
 - Als je iets wil doen met scrollen, dan kun je het event 'scroll' gebruiken. Misschien kun je ook iets doen met de [Intersection observer](https://pawelgrzybek.com/the-intersection-observer-api-explained/)
