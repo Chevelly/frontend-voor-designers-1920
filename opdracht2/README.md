@@ -36,18 +36,19 @@ Ik heb uiteindelijk gekozen voor de use case waarvoor ik een portfolio website m
 ### 02 Viewports
 #### Viewport 01
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp1.png "Schetsen")
+Dit is de landingspagina van de portfolio website. Het is een uitnodigende titel die door middel van *display: block* en *margin: 0 auto;* gecentreerd wordt. Vanaf de landingspagina kan door op de tab-toets te drukken naar de volgende section gesprongen worden.
 
 #### Viewport 02
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp2.png "Schetsen")
+Wanneer de gebruiker naar beneden scrollt vult de betreffende section zich met content. De content schuift vanuit links in beeld. Dit doe ik door middel van een CSS transitie, namelijk *transform: translate(x,y)* waarbij de verschuiving met een delay op de Y-as plaatsvindt. Daarnaast verandert de *opacity* van 1 naar 0.
 
 #### Viewport 03
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp3.png "Schetsen")
+Wanneer de gebruiker verder naar beneden scrollt verandert de *opacity* van de content van de section erboven van 1 naar 0. Ook hier vult de betreffende section zich met inhoud bij een scroll-event. De inhoud komt dit keer van beneden door middel van de CSS transitie *transform: translate(x,y)* waarbij de verschuiving op de X-as plaatsvindt.
 
 #### Viewport 04
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht2/img/Proces/vp4.png "Schetsen")
+Bij de voorlopig laatste viewport vult de betreffende section zich ook met inhoud bij een scroll-event. Ook hier komt de inhoud van beneden naar boven geschoven door middel van de CSS transitie *transform: translate(x,y)* waarbij de verschuiving op de X-as plaatsvindt.
 
-
-## Resources
-- Bekijk hier de lijst [User Interface Events](https://developer.mozilla.org/en-US/docs/Web/API/UIEvent) die je in javascript kunt gebruiken.
-- Als je iets wil doen met scrollen, dan kun je het event 'scroll' gebruiken. Misschien kun je ook iets doen met de [Intersection observer](https://pawelgrzybek.com/the-intersection-observer-api-explained/)
-- Als een onderdeel van je pagina in beeld moet verschijnen na een click, dan kun je iets doen met [scrollIntoView](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView).
+### 03 Javascript
+Door een Eventlistener aan de window te koppelen wordt een scroll-event gedetecteerd.
