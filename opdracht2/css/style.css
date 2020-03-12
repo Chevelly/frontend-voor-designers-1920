@@ -1,0 +1,103 @@
+* {
+    color: rosybrown;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: #ddd;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+    margin: 0 auto;
+}
+
+.scrollAnimatie {
+    display: flex;
+    height: 100%;
+    opacity: 0;
+    padding: 0 120px;
+    transition: 0.8s;
+}
+
+.scrollAnimatie:nth-child(2n) {
+    background: #f0f0f0;
+}
+
+.scrollAnimatie .content {
+    margin: auto;
+}
+
+.animatie {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+h1,
+h2 {
+    color: midnightblue;
+    display: block;
+    font-family: sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    padding-left: 0;
+    transition: all 0.9s;
+    transition-delay: 0.1s;
+}
+
+p {
+    font-size: 0.9em;
+    transition: all 1.3s;
+}
+
+/* Definieert een 2D translatie op de X- en Y-as. */
+.animatie-top {
+    transform: translate(0, 1000px);
+}
+
+.animatie-links {
+    transform: translate(-500px, 0);
+}
+
+.animatie .animatie-top {
+    transform: translate(0, 0);
+}
+
+.animatie .animatie-links {
+    transform: translate(0, 0);
+}
+
+/* Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+/* De volgende regels besturen de tussenstappen in een CSS-animatiereeks door de opacity=ondoorzichtigheid te definiëren voor keyframes. */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
