@@ -1,0 +1,117 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Ewert', cursive;
+    font-size: 3.5em;
+    color: gold;
+}
+
+.gordijn {
+    width: 100%;
+    /* Het gordijn heeft de volledige breedte van het scherm */
+    height: 100vh;
+    overflow: hidden;
+    /* De gordijn stukken schuiven hierdoor buiten de container zonder dat het zichtbaar is */
+}
+
+.gordijn_wikkel {
+    width: 100%;
+    height: 100%;
+}
+
+.gordijn_stuk {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(90deg, #c23232 25%, firebrick 25%, firebrick 50%, #c23232 50%, #c23232 75%, firebrick 75%, firebrick 100%);
+    background-size: 475.00px 475.00px;
+    /* https://css-tricks.com/stripes-css/ */
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    color: #eee;
+    width: 50%;
+    /* Elk gordijn stuk neemt de helft van de container in */
+    height: 100vh;
+    float: left;
+    /* De gordijn stukken bevinden zich naast elkaar */
+    position: relative;
+    /* Nodig om de z-index te bepalen */
+    z-index: 2;
+    /* Plaatst de gordijn stukken bovenop de random film */
+    transition: all 1s ease-out;
+    /* Animates the sliding transition */
+}
+
+.gordijn_stuk-links {
+    /* Styling voor het sliden van het linkerstuk */
+    justify-content: flex-end;
+    transform: translateX(-100%);
+}
+
+.gordijn_stuk-rechts {
+    /* Styling voor het sliden van het rechterstuk */
+    justify-content: flex-start;
+    transform: translateX(100%);
+}
+
+
+.gordijn_film {
+    background-image: radial-gradient(dimgray, #2d2a2a, #171616);
+    color: #eee;
+    padding: 1rem 0;
+    text-align: center;
+    position: absolute;
+    /* Plaatst de positie van de random film aan het begin van de container */
+    z-index: 1;
+    /* Plaatst de random film achter de gordijn stukken, die z-index 2 zijn */
+    width: 100%;
+    height: 100%;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    /* Plaatst de checkbox aan het begin van de container */
+    cursor: pointer;
+    /* Geeft een hint dat het gordijn clickbaar is */
+    width: 100%;
+    /* De checkbox is net zo wijd als de wikkel */
+    height: 100%;
+    /* De checkbox is net zo hoog als de wikkel */
+    z-index: 100;
+    /* De checkbox ligt bovenop alle andere elementen */
+    opacity: 0;
+    /* De checkbox is niet zichtbaar */
+}
+
+/* Wanneer de checkbox 'ge-checked' wordt... */
+
+/* Het linker gordijn stuk schuift naar binnen */
+input[type=checkbox]:checked ~ div.gordijn_stuk-links {
+    transform: translateX(0);
+}
+
+/* Het rechter gordijn stuk schuift naar binnen */
+input[type=checkbox]:checked ~ div.gordijn_stuk-rechts {
+    transform: translateX(0);
+}
+
+/* Het linker gordijn stuk schuift naar buiten */
+.gordijn_stuk-links {
+    transform: translateX(-100%);
+}
+
+/* Het rechter gordijn stuk schuift naar buiten */
+.gordijn_stuk-rechts {
+    transform: translateX(100%);
+}
+
+img {
+    width: 25%;
+    margin-top: 30px;
+}
+
+article {
+    margin-top: 60px;
+}
