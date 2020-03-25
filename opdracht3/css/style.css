@@ -3,11 +3,11 @@ body {
     background-color: black;
 }
 
-h1 {
-    font-family: 'Ewert', cursive;
-    font-size: 3.5em;
-    color: gold;
-}
+
+
+/***************/
+/* het gordijn */
+/***************/
 
 .gordijn {
     width: 100%;
@@ -48,12 +48,16 @@ h1 {
     /* Styling voor het sliden van het linkerstuk */
     justify-content: flex-end;
     transform: translateX(-100%);
+/* dit heb je nodig als een tekst over meer regels loopt */
+    text-align:right;
 }
 
 .gordijn_stuk-rechts {
     /* Styling voor het sliden van het rechterstuk */
     justify-content: flex-start;
     transform: translateX(100%);
+    /* dit heb je nodig als een tekst over meer regels loopt */
+    text-align:left;
 }
 
 
@@ -70,6 +74,18 @@ h1 {
     height: 100%;
 }
 
+/* de tekst op het gordijn */
+h1 {
+    font-family: 'Ewert', cursive;
+    font-size: 3.5em;
+    color: gold;
+    padding:1rem;
+}
+
+
+/**********************************/
+/* de checkbox die als knop dient */
+/**********************************/
 input[type=checkbox] {
     position: absolute;
     /* Plaatst de checkbox aan het begin van de container */
@@ -85,7 +101,10 @@ input[type=checkbox] {
     /* De checkbox is niet zichtbaar */
 }
 
+
+/*********************************************/
 /* Wanneer de checkbox 'ge-checked' wordt... */
+/*********************************************/
 
 /* Het linker gordijn stuk schuift naar binnen */
 input[type=checkbox]:checked ~ div.gordijn_stuk-links {
@@ -107,11 +126,15 @@ input[type=checkbox]:checked ~ div.gordijn_stuk-rechts {
     transform: translateX(100%);
 }
 
+
+/***********/
+/* de film */
+/***********/
+article {
+    margin-top: 60px;
+}
+
 img {
     width: 25%;
     margin-top: 30px;
-}
-
-article {
-    margin-top: 60px;
 }

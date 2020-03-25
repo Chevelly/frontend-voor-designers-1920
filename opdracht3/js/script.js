@@ -1,9 +1,36 @@
 /* de checkbox */
 var deCheckbox = document.querySelector("input");
 /* als er op geklikt wordt, wordt de functie haalMoviesOp uitgevoerd */
-deCheckbox.addEventListener("click", haalMoviesOp);
+deCheckbox.addEventListener("change", opCheckboxGeklikt);
 
-function haalMoviesOp() {
+
+
+function opCheckboxGeklikt(){
+    // als de checkbox ge-check-ed wordt
+    if ( this.checked ) {
+        // wachten tot het gordijn dicht is
+        // een transtion heeft ook events
+        // het transitionend event gaat af als de transition klaar is
+        // daarmee kun je wachten om iets te doen tot de transition klaar is
+        let eenVanDeGordijnen = document.body.querySelector(".gordijn_stuk-links");
+        eenVanDeGordijnen.addEventListener("transitionend", function(){
+            // als het grodijn dicht is
+            // de film weghalen
+            document.body.querySelector("main :first-child").remove();
+        }, {once: true});
+    }
+
+    // als de checkbox ge-uncheck-ed wordt
+    else {
+        // film ophalen
+        tatatatahHierIsDeFilm();
+        // gordijn open
+        // gaat met css
+    }
+}
+
+
+function tatatatahHierIsDeFilm() {
 
     /* dit is de url waar je de data vandaan haalt */
     let requestURL = "https://koopreynders.github.io/frontendvoordesigners/opdracht3/json/movies.json";
@@ -92,3 +119,4 @@ function showTitle(jsonObj) {
         header.appendChild(title);
     }
 } */
+
