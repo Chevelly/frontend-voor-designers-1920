@@ -47,4 +47,4 @@ Les 8: Oplevering en beoordeling
 
 
 ## Proces
-Nauwkeurig bijgehouden maar wordt vervolgd..
+Nauwkeurig bijgehouden dus wordt vervolgd..
