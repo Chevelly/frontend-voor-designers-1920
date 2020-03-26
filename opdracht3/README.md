@@ -32,8 +32,11 @@ Aan de hand van de beschikbare externe JSON data heb ik een functionaliteit beda
 
 ## Planning
 Les 5: Briefing opdracht 3, API uitzoeken, tutorial doorlopen, schetsen en beginnen met coderen
+
 Les 6: Eerste versie testen. Meenemen: breakdown-schets, JSON laden in de console, daarna in Javascript HTML elementen aanmaken, de data koppelen en toevoegen aan de DOM
+
 Les 7: Demo presenteren
+
 Les 8: Oplevering en beoordeling
 
 
@@ -47,4 +50,4 @@ Les 8: Oplevering en beoordeling
 
 
 ## Proces
-Nauwkeurig bijgehouden dus wordt vervolgd..
+Nauwkeurig bijgehouden - wordt vervolgd..
