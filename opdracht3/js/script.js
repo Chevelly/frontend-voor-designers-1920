@@ -1,8 +1,7 @@
 /* de checkbox */
 var deCheckbox = document.querySelector("input");
-/* als er op geklikt wordt, wordt de functie haalMoviesOp uitgevoerd */
+/* als er op geklikt wordt, wordt de functie tatatatahHierIsDeFilm uitgevoerd */
 deCheckbox.addEventListener("change", opCheckboxGeklikt);
-
 
 
 function opCheckboxGeklikt() {
@@ -14,7 +13,7 @@ function opCheckboxGeklikt() {
         // daarmee kun je wachten om iets te doen tot de transition klaar is
         let eenVanDeGordijnen = document.body.querySelector(".gordijn_stuk-links");
         eenVanDeGordijnen.addEventListener("transitionend", function () {
-            // als het grodijn dicht is
+            // als het gordijn dicht is
             // de film weghalen
             document.body.querySelector("main :first-child").remove();
         }, {
@@ -96,15 +95,16 @@ function tatatatahHierIsDeFilm() {
             /* de movie (het article) aan de main toevoegen */
             document.body.querySelector("main").appendChild(movie);
 
-            /* geluid afspelen bij het openen van de gordijnen */
+            /* tadaaah geluid afspelen bij het openen van de gordijnen */
             var audioSurprise = new Audio("https://www.myinstants.com/media/sounds/tadaa.mp3");
             audioSurprise.play();
         }
     }
 }
 
+
 /***************/
-/* met je stem */
+/* stembediening */
 /***************/
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
@@ -114,7 +114,6 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 var commandos = [ "flip it"];
 var grammar = '#JSGF V1.0; grammar commandos; public <commando> = ' + commandos.join(' | ') + ' ;'
 
-/* het luisterobject */
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 
@@ -143,7 +142,7 @@ recognition.onspeechend = function() {
 luisteren();
 
 
-/*
+/* Notities
 let random = document.getElementById("random");
 // nieuwe node creeeren
 let main = document.createElement("main");

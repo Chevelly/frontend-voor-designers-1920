@@ -1,6 +1,11 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: black;
+    background-color: #171616;
 }
 
 /***************/
@@ -46,8 +51,8 @@ body {
     /* Styling voor het sliden van het linkerstuk */
     justify-content: flex-end;
     transform: translateX(-100%);
-/* dit heb je nodig als een tekst over meer regels loopt */
-    text-align:right;
+    /* dit heb je nodig als een tekst over meer regels loopt */
+    text-align: right;
 }
 
 .gordijn_stuk-rechts {
@@ -55,7 +60,7 @@ body {
     justify-content: flex-start;
     transform: translateX(100%);
     /* dit heb je nodig als een tekst over meer regels loopt */
-    text-align:left;
+    text-align: left;
 }
 
 
@@ -77,7 +82,16 @@ h1 {
     font-family: 'Ewert', cursive;
     font-size: 3.5em;
     color: gold;
-    padding:1rem;
+}
+
+h2 {
+    font-family: 'Ewert', cursive;
+    font-size: 3em;
+    color: mediumturquoise;
+}
+
+p {
+    font-style: italic;
 }
 
 
@@ -91,8 +105,8 @@ input[type=checkbox] {
     /* Geeft een hint dat het gordijn clickbaar is */
     width: 100%;
     /* De checkbox is net zo wijd als de wikkel */
-    height: 100%;
-    /* De checkbox is net zo hoog als de wikkel */
+    height: 60%;
+    /* De checkbox heeft een hoogte van 3/5 van de wikkel */
     z-index: 100;
     /* De checkbox ligt bovenop alle andere elementen */
     opacity: 0;
@@ -128,11 +142,63 @@ input[type=checkbox]:checked ~ div.gordijn_stuk-rechts {
 /***********/
 /* de film */
 /***********/
-article {
-    margin-top: 60px;
-}
+article {}
 
 img {
-    width: 25%;
-    margin-top: 30px;
+    border-radius: 0px 0px 0px 0px;
+    -moz-border-radius: 0px 0px 0px 0px;
+    -webkit-border-radius: 0px 0px 0px 0px;
+    border: 20px ridge goldenrod;
+    width: 24%;
+    margin-top: 10px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+img:hover {
+    transform: rotateY(180deg);
+}
+
+
+/***********/
+/* de spotlights */
+/***********/
+.spotlight {
+    animation: top-right 5s ease-in-out infinite alternate;
+    border-bottom: none;
+    border-left: solid 20vh transparent;
+    border-right: solid 20vh transparent;
+    border-top: solid 190vh rgba(247, 204, 96, 0.3);
+    bottom: 0;
+    height: 0;
+    left: 0;
+    position: absolute;
+    transform-origin: bottom;
+    width: 0;
+}
+
+.spotlight + .spotlight {
+    animation: top-left 4s ease-in-out infinite alternate;
+    left: auto;
+    right: 0;
+}
+
+@keyframes top-right {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(70deg);
+    }
+}
+
+@keyframes top-left {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-70deg);
+    }
 }
