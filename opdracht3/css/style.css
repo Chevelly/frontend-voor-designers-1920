@@ -165,6 +165,7 @@ img:hover {
 /***********/
 .spotlight {
     animation: top-right 5s ease-in-out infinite alternate;
+    /* Duur van 5s voor speels en realistisch effect */
     border-bottom: none;
     border-left: solid 20vh transparent;
     border-right: solid 20vh transparent;
@@ -174,11 +175,13 @@ img:hover {
     left: 0;
     position: absolute;
     transform-origin: bottom;
+    /* Rotatie vindt plaats vanaf het midden van de bottom */
     width: 0;
 }
 
 .spotlight + .spotlight {
     animation: top-left 4s ease-in-out infinite alternate;
+    /* Duur van 4s voor speels en realistisch effect */
     left: auto;
     right: 0;
 }
