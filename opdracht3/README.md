@@ -1,3 +1,6 @@
+https://chevelly.github.io/frontend-voor-designers-1920/opdracht3/
+(scherm uitzoomen tot tekst op gordijnen op 1 regel komt)
+
 Hoi Sanne!
 
 Hopelijk heb je een fijn weekend of inmiddels al gehad.
