@@ -1,3 +1,22 @@
+Hoi Sanne!
+
+Hopelijk heb je een fijn weekend of inmiddels al gehad.
+
+Jouw stukjes code van de afgelopen keer hebben mij enorm geholpen om het beter te begrijpen. Dankjewel daarvoor.
+
+Sinds afgelopen keer heb ik het ontwerp hier en daar wat aangepast en de code vereenvoudigd waar mogelijk was. Daarnaast heb ik een loading state toegevoegd die de gebruiker ziet tot de pagina volledig geladen wordt.
+
+Tot de eindoplevering heb ik gepland om de focus te leggen op het toevoegen van nog een state van de UI Stack en een of meer UI Events zoals keypress/keydown etc. Daarnaast wil ik nog werken aan de verslaglegging van het proces. Ik heb alle stappen nauwkeurig bijgehouden en wil nu nog de tijd nemen om dit te beschrijven aan de hand van onder andere de design principles.
+
+Door een vakdeadline op vrijdagavond om 23:00 en aanstaande maandag een projectdeadline én een vakdeadline aan het einde van de dag ben ik aan bovenstaande nog niet toegekomen. Voor vandaag heb ik daarom ook geen vragen.
+
+Bedankt voor je aandacht!
+
+Met vriendelijke groet,
+
+Chevelly
+
+
 # Opdracht 3: Een interactie uitwerken met externe data
 ## Verslaglegging door Chevelly Hiralall, 500700481
 
