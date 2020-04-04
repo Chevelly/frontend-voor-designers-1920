@@ -1,168 +1,242 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
-    height: 100%;
-    overflow: hidden;
+    height: 100vh;
 }
 
 body {
+    height: 100vh;
+    /* om het randje om de gordijnen weg te halen */
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #171616;
+    background-image: radial-gradient(dimgray, #2d2a2a, #171616);
+    overflow: hidden;
+}
+
+/***************/
+/* UI Stack: loading state */
+/***************/
+#preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid whitesmoke;
+    border-radius: 50%;
+    border-top: 16px ridge goldenrod;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#loading_state {
+    display: none;
+    -webkit-animation-name: loadingstate;
+    -webkit-animation-duration: 1s;
+    animation-name: loadingstate;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes loadingstate {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes loadingstate {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+h1,
+h2 {
+    font-family: 'Ewert', cursive;
 }
 
 /***************/
 /* het gordijn */
 /***************/
-
-.gordijn {
-    width: 100%;
-    /* Het gordijn heeft de volledige breedte van het scherm */
-    height: 100vh;
-    overflow: hidden;
-    /* De gordijn stukken schuiven hierdoor buiten de container zonder dat het zichtbaar is */
-}
-
-.gordijn_wikkel {
-    width: 100%;
-    height: 100%;
-}
-
 .gordijn_stuk {
-    display: flex;
-    align-items: center;
-    background-image: linear-gradient(90deg, #c23232 25%, firebrick 25%, firebrick 50%, #c23232 50%, #c23232 75%, firebrick 75%, firebrick 100%);
-    background-size: 475.00px 475.00px;
-    /* https://css-tricks.com/stripes-css/ */
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-    color: #eee;
+    position: absolute;
     width: 50%;
     /* Elk gordijn stuk neemt de helft van de container in */
-    height: 100vh;
-    float: left;
-    /* De gordijn stukken bevinden zich naast elkaar */
-    position: relative;
-    /* Nodig om de z-index te bepalen */
-    z-index: 2;
+    height: 100%;
+    top: 0;
     /* Plaatst de gordijn stukken bovenop de random film */
-    transition: all 1s ease-out;
+    /* Nodig om de z-index te bepalen */
+    z-index: 50;
+
+    border-radius: 0 0 60px 60px;
+    /* om de tekst in het midden te zetten */
+    display: flex;
+    align-items: center;
+
+    transform: translateX(0);
     /* Animates the sliding transition */
+    transition: transform 1s ease-out;
 }
 
-.gordijn_stuk-links {
+.gordijn_stuk.links {
+    left: 0;
     /* Styling voor het sliden van het linkerstuk */
-    justify-content: flex-end;
-    transform: translateX(-100%);
     /* dit heb je nodig als een tekst over meer regels loopt */
-    text-align: right;
+    /* https://css-tricks.com/stripes-css/ */
+    background-image:
+        repeating-linear-gradient(-90deg,
+        #c23232 0, #c23232 4em,
+        firebrick 4em, firebrick 8em);
 }
 
-.gordijn_stuk-rechts {
+.gordijn_stuk.rechts {
+    right: 0;
     /* Styling voor het sliden van het rechterstuk */
-    justify-content: flex-start;
-    transform: translateX(100%);
     /* dit heb je nodig als een tekst over meer regels loopt */
     text-align: left;
-}
-
-
-.gordijn_film {
-    background-image: radial-gradient(dimgray, #2d2a2a, #171616);
-    color: #eee;
-    padding: 1rem 0;
-    text-align: center;
-    position: absolute;
-    /* Plaatst de positie van de random film aan het begin van de container */
-    z-index: 1;
-    /* Plaatst de random film achter de gordijn stukken, die z-index 2 zijn */
-    width: 100%;
-    height: 100%;
+    /* https://css-tricks.com/stripes-css/ */
+    background-image:
+        repeating-linear-gradient(90deg,
+        firebrick 0, firebrick 4em,
+        #c23232 4em, #c23232 8em);
 }
 
 /* de tekst op het gordijn */
 h1 {
-    font-family: 'Ewert', cursive;
     font-size: 3.5em;
     color: gold;
 }
 
-h2 {
-    font-family: 'Ewert', cursive;
-    font-size: 3em;
-    color: mediumturquoise;
-}
-
-p {
-    font-style: italic;
-}
-
-
-/**********************************/
-/* de checkbox die als knop dient */
-/**********************************/
-input[type=checkbox] {
-    position: absolute;
-    /* Plaatst de checkbox aan het begin van de container */
-    cursor: pointer;
-    /* Geeft een hint dat het gordijn clickbaar is */
-    width: 100%;
-    /* De checkbox is net zo wijd als de wikkel */
-    height: 60%;
-    /* De checkbox heeft een hoogte van 3/5 van de wikkel */
-    z-index: 100;
-    /* De checkbox ligt bovenop alle andere elementen */
-    opacity: 0;
-    /* De checkbox is niet zichtbaar */
-}
-
-
-/*********************************************/
-/* Wanneer de checkbox 'ge-checked' wordt... */
-/*********************************************/
-
-/* Het linker gordijn stuk schuift naar binnen */
-input[type=checkbox]:checked ~ div.gordijn_stuk-links {
-    transform: translateX(0);
-}
-
-/* Het rechter gordijn stuk schuift naar binnen */
-input[type=checkbox]:checked ~ div.gordijn_stuk-rechts {
-    transform: translateX(0);
-}
+/************************************/
+/* Wanneer de body class tada heeft */
+/************************************/
 
 /* Het linker gordijn stuk schuift naar buiten */
-.gordijn_stuk-links {
-    transform: translateX(-100%);
+body.tada .gordijn_stuk.links {
+    transform: translateX(calc(-100% + 90px));
 }
 
 /* Het rechter gordijn stuk schuift naar buiten */
-.gordijn_stuk-rechts {
-    transform: translateX(100%);
+body.tada .gordijn_stuk.rechts {
+    transform: translateX(calc(100% - 90px));
 }
 
 
 /***********/
 /* de film */
 /***********/
-article {}
-
-img {
-    border-radius: 0px 0px 0px 0px;
-    -moz-border-radius: 0px 0px 0px 0px;
-    -webkit-border-radius: 0px 0px 0px 0px;
-    border: 20px ridge goldenrod;
-    width: 24%;
-    margin-top: 10px;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-img:hover {
+article {
+    width: 60em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
+article > h2 {
+    text-align: center;
+    font-size: 3em;
+    color: mediumturquoise;
+    margin: 0;
+}
+
+article > p {
+    text-align: center;
+    font-style: italic;
+    color: white;
+}
+
+/* flipcontainer */
+article > div {
+    position: relative;
+    width: 50%;
+}
+
+/* de poster */
+article > div > img {
+    display: block;
+    border: 20px ridge goldenrod;
+    width: 100%;
+    margin-top: 1em;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+
+    backface-visibility: hidden;
+}
+
+/* de details */
+article > div > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    margin-top: 1em;
+    color: whitesmoke;
+    background-color: #171616;
+    border: 20px ridge goldenrod;
+
+    transition: transform 1s ease-in-out;
+    transform: rotateY(-180deg);
+
+    backface-visibility: hidden;
+}
+
+
+/* flipcontainer - hover */
+article > div:hover > img {
     transform: rotateY(180deg);
 }
 
+article > div:hover > div {
+    transform: rotateY(0);
+}
 
-/***********/
+
+/*****************/
 /* de spotlights */
-/***********/
+/*****************/
 .spotlight {
     animation: top-right 5s ease-in-out infinite alternate;
     /* Duur van 5s voor speels en realistisch effect */
@@ -170,13 +244,14 @@ img:hover {
     border-left: solid 20vh transparent;
     border-right: solid 20vh transparent;
     border-top: solid 190vh rgba(247, 204, 96, 0.3);
-    bottom: 0;
+    bottom: -2.5em;
     height: 0;
     left: 0;
     position: absolute;
     transform-origin: bottom;
     /* Rotatie vindt plaats vanaf het midden van de bottom */
     width: 0;
+    z-index: 40;
 }
 
 .spotlight + .spotlight {

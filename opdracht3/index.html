@@ -10,41 +10,32 @@
     <link href="https://fonts.googleapis.com/css?family=Ewert&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <!-- De 'parent' -->
-    <div class="gordijn">
+<body onload="startTellen()">
 
-        <!-- De wikkel -->
-        <div class="gordijn_wikkel">
+<div id="preloader"></div>
 
-            <!-- De checkbox -->
-            <input type="checkbox" checked>
+  <!-- De loading state -->
+   <div id="loading_state">
 
-            <!-- Het linker gordijn stuk -->
-            <div class="gordijn_stuk gordijn_stuk-links">
-                <h1>Keuzestress in deze tij&nbsp;</h1>
-            </div> <!-- gordijn_stuk -->
+    <!-- Het linker gordijn stuk -->
+    <div class="gordijn_stuk links">
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Last van keuzestress t</h1>
+    </div>
 
-            <!-- De random film achter de gordijnstukken -->
-            <div class="gordijn_film">
+    <!-- Het rechter gordijn stuk -->
+    <div class="gordijn_stuk rechts">
+        <h1>ijdens de quarantaine?</h1>
+    </div>
 
-                <main>
-                    <!-- nu leeg - wordt gevuld met js -->
-                </main>
+    <div class="spotlight"></div>
+    <div class="spotlight"></div>
 
-                <div class="spotlight"></div>
-                <div class="spotlight"></div>
+    <!-- De random film achter de gordijnstukken -->
+    <main>
+        <!-- nu leeg - wordt gevuld met js -->
+    </main>
 
-            </div> <!-- gordijn_film -->
-
-            <!-- Het rechter gordijn stuk -->
-            <div class="gordijn_stuk gordijn_stuk-rechts">
-                <h1>den van quarantaine?</h1>
-            </div> <!-- gordijn_stuk -->
-
-        </div> <!-- gordijn_wikkel -->
-
-    </div> <!-- gordijn -->
+    </div>
 
     <script src="js/script.js"></script>
 </body>

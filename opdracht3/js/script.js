@@ -1,17 +1,32 @@
-/* de checkbox */
-var deCheckbox = document.querySelector("input");
-/* als er op geklikt wordt, wordt de functie tatatatahHierIsDeFilm uitgevoerd */
-deCheckbox.addEventListener("change", opCheckboxGeklikt);
+/* UI Stack: Loading State */
+var timeOut;
+
+/* De functie voor het tonen van de pagina wordt uitgevoerd wanneer de tijd verstreken is */
+function startTellen() {
+    timeOut = setTimeout(toonPagina, 3000);
+}
+
+function toonPagina() {
+    document.getElementById("preloader").style.display = "none";
+    document.getElementById("loading_state").style.display = "block";
+}
+
+/* de gordijnen */
+var linkerGordijnStuk = document.querySelector(".gordijn_stuk.links");
+var rechterGordijnStuk = document.querySelector(".gordijn_stuk.rechts");
+
+linkerGordijnStuk.addEventListener("click", opGordijnGeklikt);
+rechterGordijnStuk.addEventListener("click", opGordijnGeklikt);
 
 
-function opCheckboxGeklikt() {
-    // als de checkbox ge-check-ed wordt
-    if (this.checked) {
+function opGordijnGeklikt() {
+    if (document.body.classList.contains("tada")) {
         // wachten tot het gordijn dicht is
         // een transtion heeft ook events
         // het transitionend event gaat af als de transition klaar is
         // daarmee kun je wachten om iets te doen tot de transition klaar is
-        let eenVanDeGordijnen = document.body.querySelector(".gordijn_stuk-links");
+        document.body.classList.remove("tada");
+        let eenVanDeGordijnen = document.body.querySelector(".gordijn_stuk.links");
         eenVanDeGordijnen.addEventListener("transitionend", function () {
             // als het gordijn dicht is
             // de film weghalen
@@ -19,14 +34,9 @@ function opCheckboxGeklikt() {
         }, {
             once: true
         });
-    }
-
-    // als de checkbox ge-uncheck-ed wordt
-    else {
-        // film ophalen
+    } else {
+        document.body.classList.add("tada");
         tatatatahHierIsDeFilm();
-        // gordijn open
-        // gaat met css
     }
 }
 
@@ -70,76 +80,103 @@ function tatatatahHierIsDeFilm() {
     };
 
     function renderMovies(movies) {
+
         /* doorloopt alle films in de array en keert een willekeurige film terug */
-        var randomMovie = Math.floor(Math.random() * (movies.length)); {
+        var randomMovie = Math.floor(Math.random() * (movies.length));
 
-            /* dit gebeurt voor elke film */
-            /* elementen aanmaken voor de HTML van de film */
-            let movie = document.createElement("article");
-            let title = document.createElement("h2");
-            let plot = document.createElement("p");
-            let poster = document.createElement("img");
+        /* dit gebeurt voor elke film */
+        /* elementen aanmaken voor de HTML van de film */
+        let movie = document.createElement("article");
+        let flipContainer = document.createElement("div");
+        let movieDetails = document.createElement("div");
 
-            /* de title vullen met de filminfo van de willekeurig gekozen film uit de array */
-            title.innerHTML = movies[randomMovie].title;
-            /* de plot vullen met de filminfo van de willekeurig gekozen film uit de array */
-            plot.innerHTML = movies[randomMovie].simple_plot;
-            /* de src van het plaatje vullen met de filminfo van de willekeurig gekozen film uit de array */
-            poster.src = movies[randomMovie].cover;
+        let title = document.createElement("h2");
+        let simplePlot = document.createElement("p");
+        let poster = document.createElement("img");
+        let plot = document.createElement("p");
 
-            /* de elementen aan de movie (het article) toevoegen */
-            movie.appendChild(title);
-            movie.appendChild(plot);
-            movie.appendChild(poster);
+        /* de title vullen met de filminfo van de willekeurig gekozen film uit de array */
+        title.innerHTML = movies[randomMovie].title;
+        /* de plot vullen met de filminfo van de willekeurig gekozen film uit de array */
+        simplePlot.innerHTML = movies[randomMovie].simple_plot;
+        /* de src van het plaatje vullen met de filminfo van de willekeurig gekozen film uit de array */
+        poster.src = movies[randomMovie].cover;
+        plot.innerHTML = movies[randomMovie].plot
 
-            /* de movie (het article) aan de main toevoegen */
-            document.body.querySelector("main").appendChild(movie);
+        /* de elementen aan de movie (het article) toevoegen */
+        movie.appendChild(title);
+        movie.appendChild(simplePlot);
 
-            /* tadaaah geluid afspelen bij het openen van de gordijnen */
-            var audioSurprise = new Audio("https://www.myinstants.com/media/sounds/tadaa.mp3");
-            audioSurprise.play();
-        }
+        flipContainer.appendChild(poster);
+        movieDetails.appendChild(plot);
+        flipContainer.appendChild(movieDetails);
+        movie.appendChild(flipContainer);
+
+        /* de movie (het article) aan de main toevoegen */
+        document.body.querySelector("main").appendChild(movie);
+
+        /* tadaaah geluid afspelen bij het openen van de gordijnen */
+        var audioSurprise = new Audio("https://www.myinstants.com/media/sounds/tadaa.mp3");
+        audioSurprise.play();
     }
 }
 
 
-/***************/
+/*****************/
 /* stembediening */
-/***************/
+/*****************/
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
 /* de commando's */
-var commandos = [ "flip it"];
+var commandos = ['openen'];
 var grammar = '#JSGF V1.0; grammar commandos; public <commando> = ' + commandos.join(' | ') + ' ;'
 
+/* het luisterobject */
 var recognition = new SpeechRecognition();
 var speechRecognitionList = new SpeechGrammarList();
 
-function luisteren(){
-   recognition.start();
-   console.log('Ready to receive a command.');
+function luisteren() {
+    recognition.start();
+    console.log('Ready to receive a command.');
 }
 
 /* het luisterobject de commando's leren */
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.continuous = true;
-recognition.lang = "nl";
+recognition.lang = 'nl';
 recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
 
-recognition.onresult = function(event) {
-   spraakAfhandelen(event);
+function spraakAfhandelen(event) {
+    var last = event.results.length - 1;
+    var commando = event.results[last][0].transcript;
+    console.log('Result received: ' + commando + '. ' + 'Confidence: ' + event.results[0][0].confidence);
+
+    if (commando.trim() == "openen") {
+        if (!document.body.classList.contains("tada")) {
+            opGordijnGeklikt();
+        }
+    } else if (commando.trim() == "sluiten") {
+        if (document.body.classList.contains("tada")) {
+            opGordijnGeklikt();
+        }
+    }
 }
 
-recognition.onspeechend = function() {
-  recognition.stop();
+recognition.onresult = function (event) {
+    spraakAfhandelen(event);
+}
+
+recognition.onend = function () {
+    luisteren();
 }
 
 luisteren();
+
 
 
 /* Notities
