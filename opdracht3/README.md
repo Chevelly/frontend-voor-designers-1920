@@ -15,13 +15,6 @@ Voor de eindopdracht wil een 'Quaranthemed Movie Generator' ontwerpen die de geb
 Aan de hand van de beschikbare externe JSON data heb ik een functionaliteit bedacht die je op meerdere manieren kunt bedienen. Ik heb eerst geschetst hoe de functionaliteit er uit komt te zien. Daarna schets ik een breakdown van hoe de verschillende elementen technisch moeten gaan werken. Tot slot codeer ik de functionaliteit in HTML, CSS en Javascript en test ik verschillende versies van mijn ontwerp in een browser.
 
 
-## Planning
-Les 5: Briefing opdracht 3, API uitzoeken, tutorial doorlopen, schetsen en beginnen met coderen
-Les 6: Eerste versie testen. Meenemen: breakdown-schets, JSON laden in de console, daarna in Javascript HTML elementen aanmaken, de data koppelen en toevoegen aan de DOM
-Les 7: Demo presenteren
-Les 8: Oplevering en beoordeling
-
-
 ## Criteria
 1. De uitwerking van mijn ontwerp moet het doen in een browser en device naar keuze.
 2. De data wordt van een externe bron ingeladen met Javascript.
@@ -44,7 +37,7 @@ Tijdens het realiseren van mijn ontwerp ben ik begonnen met de gordijnen die alt
 In mijn eerste poging heb ik gebruik gemaakt van een plaatje van gordijnen. Al snel vond dat ik er op deze manier te gemakkelijk van afkwam dus besloot ik het effect van gordijnen na te maken met behulp van CSS.
 
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn2.png "Gordijnen")
-Met behulp van een [CSS tricks bron](https://css-tricks.com/stripes-css/) heb ik geprobeerd het effect van gordijnen te immiteren en diepte te creeëren door afwisselend lichte en donkere roodgekleurde banen naast elkaar te plaatsen.
+Met behulp van een [CSS tricks bron](https://css-tricks.com/stripes-css/) heb ik geprobeerd het effect van gordijnen te immiteren en diepte te creeëren door afwisselend lichte en donkere roodgekleurde banen naast elkaar te plaatsen. Ook heb ik de *radius* van de gordijnstukken links- en rechtsonder een bolling gegeven wat het visueel effect geeft dat er achter de gordijnen nog iets aanwezig is.
 
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn3.png "Gordijnen")
 Om het ontwerp van de landingspagina één algehele sfeer te geven heb ik een [Google font](https://fonts.google.com/specimen/Ewert?query=ewer) voor de titel op het gordijn. Net als de gordijnstukken heb ik ook deze titel in tweeën gehakt waarbij het ene deel zich in de linker-*div* bevindt en het andere deel in rechter-*div*. Wanneer de gebruiker op de gordijnen klikt zullen de gordijnen en de titel vanuit het midden naar links of rechts en buiten het beeld schuiven. Dit heb ik gedaan met behulp van CSS waarbij ik met *transform: translateX(calc(+ / -))* voor een horizontale verplaatsing zorg.
@@ -54,26 +47,26 @@ In het eindontwerp is de grootste verandering dat je naast klikken nu ook met st
 
 ### 03 Het ophalen van de film
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen1.png "Renderen")
+Tijdens de les waarbij de eindopdracht en de werking van JSON uitgelegd werd was ik vanwege ziekte helaas niet aanwezig. Ik moest er dus zelfstandig uit zien te komen. Na veel gezucht en gevloek besloot ik Sanne om hulp te vragen. Hij stuurde mij [de link naar een codepen](https://codepen.io/shooft/pen/LYVBeVv) die ik deels gekopieerd heb om een begin te kunnen maken aan het ophalen van de externe data. Ik kies er voor nu voor om de titel van een film, een simpele plot en een poster te gebruiken als data in mijn ontwerp.
+
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen2.png "Renderen")
+Met de coderegel *var randomMovie = Math.floor(Math.random() * (movies.length));* is het mij gelukt om alle films in de array in JSON te doorlopen en een willekeurige film terug te keren. De gebruiker krijgt elke keer wanneer de gordijnen openen een willekeurige film te zien. Helaas worden de rest van de films uit de array ook eronder weergeven. Dit zorgt voor wat lichtelijke frustratie. Ik ben er namelijk bijnaaaaaa.
+
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen3.png "Renderen")
+Door de *overflow* van de *body* op *hidden* te zetten is het gelukt om niet meer te laten zien dan wat de *body* toelaat. De achtergrond waar de film getoond wordt heb ik in de CSS bewust met een *radial-gradient* ontworpen waarbij ik gebruik maken van drie zwarttinten die richting het midden steeds lichter worden. Dit geeft het visuele effect van het scherm zoals in de bioscoop.
 
 
-### 04 Javascript
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap03.png "Versprongen")
-De eerste poging tot het toevoegen van Javascript verliep niet heel soepeltjes. Het ontwerp was volledig versprongen en ook de opmaak was veranderd. Na lang zoeken naar waar de fout lag bleek de link naar het CSS bestand inactief te zijn. Door het bestand opnieuw te linken kreeg ik een werkend ontwerp te zien.
+### 03 Lights, camera, action!
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/spotlights.png "Spotlights")
+Door de titel bewust een ander lettertype, grootte en kleur te geven dan het plot van de film houd ik rekening met [interface design principle 11](http://bokardo.com/principles-of-user-interface-design/) waarbij ik een sterke visuele hiërarchie creeër. Ook de plaatsing van de verschillende elementen verteld dat eerst de titel gelezen moet worden om het plot te kunnen begrijpen. De poster die daaronder geplaatst is, is als toevoeging op bovenstaande.
+
+Om het filmische effect
+
+### 04 MouseEvent
 
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap04.png "Werkend01")
-In de eerste uitgewerkte versie van het ontwerp kon je enkel kiezen uit de kleuren van de buttons maar was er geen mogelijkheid om na het kiezen van een kleur terug te gaan naar de volledige weergave van alle foto's. Hierom heb ik een regenboog kleurige button toegevoegd die alle foto's laat zien wanneer erop geklikt wordt.
+### 05 KeyboardEvent
 
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap05.png "Werkend02")
-Wanneer de 'all'-button geclickt wordt, worden alle foto's 'block' = zichtbaar. Zo niet, dan loop-ed de functie door alle foto's tot de data-class overeenkomt met die van de actieve button. De foto's die niet voldoen aan de voorwaarde worden niet zichtbaar = 'none'. Op bovenstaande foto is op de groene button geklikt waardoor de gallerij enkel de foto's laat zien die voldoen aan de voorwaarde dat zij een groene kleur hebben.
+### 06 UI Stack: Loading State
 
-
-### 05 Final touch
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap06.png "Final touch")
-Voor de eindoplevering van de eerste opdracht heb ik meer kleuren en foto's toegevoegd aan het ontwerp om te benadrukken dat de code op zo een manier geschreven is dat dit zonder enige moeite aangepast kan worden. Daarnaast heb ik de opmaak van het ontwerp een kleine touch-up gegeven zodat het een beter geheel is.
-
-
-### 06 Eindresultaat
-*Klik op de image om doorverwezen te worden naar de video.*
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/5ylRF9dOr1I/0.jpg)](http://www.youtube.com/watch?v=5ylRF9dOr1I&feature=youtu.be)
