@@ -46,34 +46,34 @@ Om het ontwerp van de landingspagina één algehele sfeer te geven heb ik een [G
 In het eindontwerp is de grootste verandering dat je naast klikken nu ook met stembediening de gordijnen kan openen en sluiten. Dit heb ik met behulp van [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) en Sanne voor elkaar gekregen. In Javascript heb ik een *luisterobject* aangemaakt en haar *commando's* aangeleerd zoals *openen* en *sluiten*. Daarnaast is de titel op de landingspagina aangepast zodat, met de [interface design principle 04](http://bokardo.com/principles-of-user-interface-design/) in gedachten, het de gebruiker begeleidt in het gebruiken van de website en vertelt wat hem of haar te verwachten staat.
 
 ### 03 Het ophalen van de film
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen1.png "Renderen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/renderen1.png "Renderen")
 Tijdens de les waarbij de eindopdracht en de werking van JSON uitgelegd werd was ik vanwege ziekte helaas niet aanwezig. Ik moest er dus zelfstandig uit zien te komen. Na veel gezucht en gevloek besloot ik Sanne om hulp te vragen. Hij stuurde mij [de link naar een codepen](https://codepen.io/shooft/pen/LYVBeVv) die ik deels gekopieerd heb om een begin te kunnen maken aan het ophalen van de externe data. Ik kies er voor nu voor om de titel van een film, een simpele plot en een poster te gebruiken als data in mijn ontwerp.
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen2.png "Renderen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/renderen2.png "Renderen")
 Met de coderegel *var randomMovie = Math.floor(Math.random() * (movies.length));* is het mij gelukt om alle films in de array in JSON te doorlopen en een willekeurige film terug te keren. De gebruiker krijgt elke keer wanneer de gordijnen openen een willekeurige film te zien. Helaas worden de rest van de films uit de array ook eronder weergeven. Dit zorgt voor wat lichtelijke frustratie. Ik ben er namelijk bijnaaaaaa.
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen3.png "Renderen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/renderen3.png "Renderen")
 Door de *overflow* van de *body* op *hidden* te zetten is het gelukt om niet meer te laten zien dan wat de *body* toelaat. De achtergrond waar de film getoond wordt heb ik in de CSS bewust met een *radial-gradient* ontworpen waarbij ik gebruik maken van drie zwarttinten die richting het midden steeds lichter worden. Dit geeft het visuele effect van het scherm zoals in de bioscoop.
 
 
 ### 03 Lights, camera, action!
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/spotlights.png "Spotlights")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/spotlights.png "Spotlights")
 Door de titel bewust een ander lettertype, grootte en kleur te geven dan het plot van de film houd ik rekening met [interface design principle 11](http://bokardo.com/principles-of-user-interface-design/) waarbij ik een sterke visuele hiërarchie creeër. Ook de plaatsing van de verschillende elementen verteld dat eerst de titel gelezen moet worden om het plot te kunnen begrijpen. De poster die daaronder geplaatst is, is als toevoeging op bovenstaande.
 
 Om het filmische effect van het ontwerp te vergroten heb ik spotlights toegevoegd die over en weer, links en rechts, de willekeurig gekozen film belichten. Ik kies voor een gele kleur net als de kleur van een lamp. Met *rgba* geef ik een *opacity* aan de kleur waardoor, wanneer het over de film heen beweegt, de film nog steeds zichtbaar is. Voor een speels en realistisch effect zet ik de duur van het rechter-spotlight op 5 seconden en die van de linker op 4 seconden.
 
 ### 04 MouseEvent
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/hover1.png "Hoveren")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/hover1.png "Hoveren")
 
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/hover2.png "Hoveren")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/hover2.png "Hoveren")
 
 ### 05 KeyboardEvent
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/credits1.png "Credits")
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/credits2.png "Credits")
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/credits3.png "Credits")
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/credits4.png "Credits")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits1.png "Credits")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits2.png "Credits")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits3.png "Credits")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits4.png "Credits")
 
 ### 06 UI Stack: Loading State
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/loadingstate.png "LoadingState")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/loadingstate.png "LoadingState")
 
