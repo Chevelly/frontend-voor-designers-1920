@@ -77,9 +77,19 @@ Ik kwam er zelf niet uit dus heb ik opnieuw een hulplijn ingezet en Sanne gemail
 
 ### 05 KeyboardEvent
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits1.png "Credits")
+Om de gebruiker te laten weten dat de experience tot zijn eind is gekomen, maak ik gebruik van een KeyboardEvent. Met een speechbubble vraag ik de gebruiker of hij of zij tevreden is met de filmkeuze. Wanneer dit niet het geval is wordt er gevraagd *sluiten* te roepen, waardoor de gordijnen sluiten en bij openen er opnieuwe een willekeurige film getoond wordt. Een wel heel erg simpele manier van het toepassen van de [interface design principle 04](http://bokardo.com/principles-of-user-interface-design/) waarbij ik de gebruiker vertel wat er te doen is en wat hem of haar te verwachten staat.
+
+Wanneer de gebruiker tevreden is met de film, kan er op de keyboard-toets C gedrukt worden. Wat er dan gebeurd is hieronder te zien:
+
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits2.png "Credits")
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits3.png "Credits")
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/credits4.png "Credits")
+De gekozen film maakt plaats voor de credits. In de eerste en tweede afbeelding is te zien hoe de namen van beneden (uit het beeld) naar boven (uit het beeld) schuiven. In CSS codeer ik dit met een 12 seconden durende *linear infinite animation* met een verticale verplaatsing door middel van *transform: translateY(-115%)* waarbij ik rekening houd dat de namen uit en weer in het beeld moeten schuiven. Ten opzichte van de eerste en tweede afbeelding, zijn de namen in de derde afbeelding in de html gecodeerd als *list-items* in een *ul*.
+
+In Javascript roep ik aan dat wanneer op de 'C' *van credits én Chevelly ;)* gedrukt wordt de *class* die ervoor zorgt dat de credits *hidden* zijn verwijderd worden.
+
+Dit is het einde van de 'Quaranthemed Movie Generator' experience.
+
 
 ### 06 UI Stack: Loading State
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/loadingstate.png "LoadingState")
@@ -87,4 +97,4 @@ De grootste uitdaging van deze opdracht was ontwerpen op basis van de UI Stack. 
 
 De *loading state* heb ik middels Javascript en *onload* verbonden aan de *body*. Wanneer de pagina geladen wordt en 3000ms verstreken zijn roep ik in Javascript op dat de landingspagina getoond moet worden. Om de landingspagina te tonen wordt er door middel van het toevoegen van een *display: none* aan de preloader de loading state onzichtbaar gemaakt en de landingspagina zichtbaar.
 
-Het laadcirkeltje heb ik ontworpen met een witte *border-radius* van 50% en een gele *border-top* en de *liniear infite spin animation*.
+Het laadcirkeltje heb ik ontworpen met een witte *border-radius* van 50% en een gele *border-top* en de *liniear infinite spin animation* van 0 tot 360 graden te draaien.
