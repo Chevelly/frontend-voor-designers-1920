@@ -1,5 +1,5 @@
 ## GitHub Pages
-[Klik hier om de live site van Opdracht 3 te bekijken.] (https://chevelly.github.io/frontend-voor-designers-1920/opdracht3/)
+[Klik hier om de live site van Opdracht 3 te bekijken.](https://chevelly.github.io/frontend-voor-designers-1920/opdracht3/)
 
 # Opdracht 3: Een interactie uitwerken met externe data
 ## Verslaglegging door Chevelly Hiralall, 500700481
@@ -40,22 +40,20 @@ De beschikbare externe JSON data was een verzameling van films en meer informati
 
 ### 02 De gordijnen
 Tijdens het realiseren van mijn ontwerp ben ik begonnen met de gordijnen die altijd gesloten zijn bij aankomst van de gebruiker. Door twee *div'jes* door middel van een class die ik aanroep in de CSS een linker- en rechterpositie te geven kon ik de *div'jes* naast elkaar positioneren. Dit is belangrijk omdat de gordijnen dan opzij kunnen schuiven.
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn1.jpg "Gordijnen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn1.png "Gordijnen")
 In mijn eerste poging heb ik gebruik gemaakt van een plaatje van gordijnen. Al snel vond dat ik er op deze manier te gemakkelijk van afkwam dus besloot ik het effect van gordijnen na te maken met behulp van CSS.
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn2.jpg "Gordijnen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn2.png "Gordijnen")
 Met behulp van een [CSS tricks bron](https://css-tricks.com/stripes-css/) heb ik geprobeerd het effect van gordijnen te immiteren en diepte te creeëren door afwisselend lichte en donkere roodgekleurde banen naast elkaar te plaatsen.
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn3.jpg "Gordijnen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn3.png "Gordijnen")
 Om het ontwerp van de landingspagina één algehele sfeer te geven heb ik een [Google font](https://fonts.google.com/specimen/Ewert?query=ewer) voor de titel op het gordijn. Net als de gordijnstukken heb ik ook deze titel in tweeën gehakt waarbij het ene deel zich in de linker-*div* bevindt en het andere deel in rechter-*div*. Wanneer de gebruiker op de gordijnen klikt zullen de gordijnen en de titel vanuit het midden naar links of rechts en buiten het beeld schuiven. Dit heb ik gedaan met behulp van CSS waarbij ik met *transform: translateX(calc(+ / -))* voor een horizontale verplaatsing zorg.
 
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn4.jpg "Gordijnen")
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht3/img/Proces/gordijn4.png "Gordijnen")
 In het eindontwerp is de grootste verandering dat je naast klikken nu ook met stembediening de gordijnen kan openen en sluiten. Dit heb ik met behulp van [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API) en Sanne voor elkaar gekregen. In Javascript heb ik een *luisterobject* aangemaakt en haar *commando's* aangeleerd zoals *openen* en *sluiten*. Daarnaast is de titel op de landingspagina aangepast zodat, met de [interface design principle 04](http://bokardo.com/principles-of-user-interface-design/) in gedachten, het de gebruiker begeleidt in het gebruiken van de website en vertelt wat hem of haar te verwachten staat.
 
-
 ### 03 Het ophalen van de film
-![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/stap02.png "Gallerij")
-Voor de gallerij zet ik elke foto in een individuele *div*. Het totaal aantal foto's in de gallerij deel ik door de hoeveelheid kolommen die ik wil, namelijk 4. De foto's binnen een kolom zitten in een *div* genaamd *column*. In het CSS bestand stel ik vast dat de maximale breedte van een kolom 25% van de breedte van het scherm mag hebben waardoor er vier kolommen naast elkaar komen. Met de *padding property* creeër ik ruimte tussen de foto's.
+![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/renderen1.png "Renderen")
 
 
 ### 04 Javascript
