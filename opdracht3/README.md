@@ -60,7 +60,7 @@ Door de *overflow* van de *body* op *hidden* te zetten is het gelukt om niet mee
 ![alt text](https://github.com/Chevelly/frontend-voor-designers-1920/blob/master/opdracht1/img/Proces/spotlights.png "Spotlights")
 Door de titel bewust een ander lettertype, grootte en kleur te geven dan het plot van de film houd ik rekening met [interface design principle 11](http://bokardo.com/principles-of-user-interface-design/) waarbij ik een sterke visuele hiërarchie creeër. Ook de plaatsing van de verschillende elementen verteld dat eerst de titel gelezen moet worden om het plot te kunnen begrijpen. De poster die daaronder geplaatst is, is als toevoeging op bovenstaande.
 
-Om het filmische effect
+Om het filmische effect van het ontwerp te vergroten heb ik spotlights toegevoegd die over en weer, links en rechts, de willekeurig gekozen film belichten. Ik kies voor een gele kleur net als de kleur van een lamp. Met *rgba* geef ik een *opacity* aan de kleur waardoor, wanneer het over de film heen beweegt, de film nog steeds zichtbaar is. Voor een speels en realistisch effect zet ik de duur van het rechter-spotlight op 5 seconden en die van de linker op 4 seconden.
 
 ### 04 MouseEvent
 
