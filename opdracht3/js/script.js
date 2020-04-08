@@ -71,6 +71,7 @@ function tatatatahHierIsDeFilm() {
         /* een andere status betekent dat er iets mis is met de data */
         else {
             // We reached our target server, but it returned an error
+
         }
     };
 
@@ -97,11 +98,12 @@ function tatatatahHierIsDeFilm() {
 
         /* de title vullen met de filminfo van de willekeurig gekozen film uit de array */
         title.innerHTML = movies[randomMovie].title;
-        /* de plot vullen met de filminfo van de willekeurig gekozen film uit de array */
+        /* de plot vullen met de simpele filminfo van de willekeurig gekozen film uit de array */
         simplePlot.innerHTML = movies[randomMovie].simple_plot;
         /* de src van het plaatje vullen met de filminfo van de willekeurig gekozen film uit de array */
         poster.src = movies[randomMovie].cover;
-        plot.innerHTML = movies[randomMovie].plot
+        /* de plot vullen met de filminfo van de willekeurig gekozen film uit de array */
+        plot.innerHTML = movies[randomMovie].plot;
 
         /* de elementen aan de movie (het article) toevoegen */
         movie.appendChild(title);
@@ -179,25 +181,21 @@ luisteren();
 
 
 
-/* Notities
-let random = document.getElementById("random");
-// nieuwe node creeeren
-let main = document.createElement("main");
-main.textContent = movie;
-// het item vervangen
+/********************/
+/* credits na keydown */
+/********************/
+let drukC = new CustomEvent("drukC");
 
-random.replaceChild(main, random.firstElementChild);
+function showContainer() {
+    let container = document.getElementsByClassName("container")[0];
+    container.classList.remove("container-hidden");
+    console.log("C is gedrukt");
+}
 
-
-const header = document.querySelector("header");
-const section = document.querySelector("section");
-
-function showTitle(jsonObj) {
-
-    var i;
-    for (i = 0; i < 20; i++) {
-        const title = document.createElement('p');
-        title.textContent = jsonObj[i]['title'];
-        header.appendChild(title);
+function dispatchEvent(event) {
+    if (event.keyCode == 67) {
+        document.dispatchEvent(drukC);
     }
-} */
+}
+document.addEventListener("keydown", dispatchEvent);
+document.addEventListener("drukC", showContainer);
